@@ -1,0 +1,40 @@
+<div class="container" style="background-color: #15c6b4 ;">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <h2 class="h1 fw-bold mb-3" style="color:#3f0a15;">The Toy Shop </h2>
+      <div class="text-center mb-5 h1 fw-bold ">Edit</div>
+      <div class="card my-5" style="background-color:#6ad6c0 ;">
+
+        <form class="card-body cardbody-color p-lg-5" href="/oto/edit/{{oto._id}}" method="post">
+          <div class="mb-3">
+            <label class="h3 text-secondary">Name</label>
+            <input type="text" name="name" class="form-control" required value="{{oto.name}}" />
+          </div>
+          <div class="mb-3">
+            <label class="h3 text-secondary">Price</label>
+            <input type="text" name="price" class="form-control" required value="{{oto.price}}" />
+          </div>
+          <div class="mb-3">
+            <label class="h3 text-secondary">Image</label>
+            <br>
+            <img src="{{robot.image}}" width="100" height="100">
+            <br>
+            <input type="text" name="image" class="form-control" required value="{{oto.image}}" />
+          </div>
+          <div class="form-group mt-3">
+      <label class="text text-success">Video</label><br>
+      <iframe src="https://www.youtube.com/embed/{{ mobile.video }}" width="200" height="150"></iframe>
+      <input class="form-control" type="text" name="video" value="{{ oto.video }}" required>
+   </div>
+<div class="form-group mt-3">
+      <label class="text text-success">color</label>
+      <input class="form-control" type="text" name="color" value="{{ oto.color }}" required>
+   </div>
+
+          <div class="text-center"><button type="submit" class="btn btn-color px-5 mb-5 w-100">edit</button></div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</div>

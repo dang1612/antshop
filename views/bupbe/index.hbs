@@ -1,0 +1,40 @@
+<table class="table table-primary text-center bg-light mt-3 mb-3">
+    {{!-- <tr>
+        <th class="h1 text text-danger" colspan="7">oto List ({{ total }})</th>
+        <th> --}}
+    <div class="row">
+        <tr>
+            <th class="h1" colspan="5">bupbe list</th>
+                    <th><a class="btn btn-success" href="/bupbe/add">Add</a>
+        </th>
+        </tr>
+    </div>
+    <div class="row">
+        <tr>
+            <th>Name</th>
+            <th>Price$</th>
+            <th>Image</th>
+            <th>video</th>
+            <th>color</th>
+            <th>Action</th>
+        </tr>
+    </div>
+        {{#each bupbe}}
+        <tr>
+            <td>{{name}}</td>
+            <td>$ {{price}}</td>
+         <th>
+            <img class="zoom" src="{{ image }}" width="200px" height="200px">
+        </th>
+        <th>
+             <iframe src="https://www.youtube.com/embed/{{ video }}" width="300" height="200"></iframe>
+        </th>
+            <td>{{color}}</td>
+        <th>
+             <a class="btn btn-warning" href="/bupbe/edit/{{_id}}">Edit</a>
+              <a class="btn btn-danger" href="/bupbe/delete/{{_id}}"
+              onclick="return confirm('Are you sure you want to delete?');"
+              >delete</a>
+        </th>
+    {{/each}}
+</table>
